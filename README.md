@@ -10,3 +10,7 @@ Thanks to:
 
 @Hyseen: https://t.me/Helge_0x00 
 
+@KOP-XIAO: https://github.com/KOP-XIAO/QuantumultX
+
+
+
