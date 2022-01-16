@@ -6,7 +6,7 @@ Thanks to:
 
 @mieqq 
 
-blackmatrix7: https://github.com/blackmatrix7/ios_rule_script 
+@blackmatrix7: https://github.com/blackmatrix7/ios_rule_script 
 
 @Hyseen: https://t.me/Helge_0x00 
 
