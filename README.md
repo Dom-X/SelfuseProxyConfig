@@ -12,5 +12,9 @@ Thanks to:
 
 @KOP-XIAO: https://github.com/KOP-XIAO/QuantumultX
 
+@NobyDa: https://github.com/NobyDa/Script
+
+@Orz-3: https://github.com/Orz-3/QuantumultX
+
 
 
