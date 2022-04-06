@@ -1,6 +1,6 @@
 #!name=Netflix Unlock Check
 #!desc=Netflix 解锁检测
-#!system=ios
+#system=ios
 #确保已配置Netflix相关规则，且需要Surge 4.11.0(2009) 信息面板功能
 
 [Panel]
