@@ -1,9 +1,10 @@
 {
-"name":"Fileball Nebula Icon", 
+"name":"Fileball Emby Icon", 
 "description":"Powered By Wow, for own use", 
 "icons":
     [       
-        {"name":"light.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/7791794E-3B86-4848-BC59-87D9777CA146.png"},
-        {"name":"dark.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/C4DD2B29-4BC4-498F-B117-8BC90D7FFAEF.png"},
+        {"name":"light.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/5004644E-E727-4F8C-8FC8-C4A186985569.png"},
+        {"name":"dark.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/E9AD3505-842D-4D76-AF2C-00630F057F05.png"},
+        {"name":"green.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/BB84634C-A70B-4834-8162-2AC496B5B87D.png"},
     ]
 }
