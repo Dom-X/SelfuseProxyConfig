@@ -2,4 +2,8 @@
 "name":"Fileball Nebula Icon", 
 "description":"By Wow, for own use", 
 "icons":
-    [
+    [       
+        {"name":"light.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/7791794E-3B86-4848-BC59-87D9777CA146.png"},
+        {"name":"dark.png", "url":"https://raw.githubusercontent.com/Dom-X/SelfuseProxyConfig/master/Other/C4DD2B29-4BC4-498F-B117-8BC90D7FFAEF.png"},
+    ]
+}
