@@ -1,0 +1,7 @@
+#ip地理位置检测
+
+[Script]
+NET_info = type=generic,timeout=10,script-path=https://gist.githubusercontent.com/xsy2004/32f8f1f30fbad2c1f3932a4f94725240/raw/0957a8044f6dcb438fc349e32e8cdd618f754c7c/NET_info.js,argument=icon=externaldrive.connected.to.line.below&group=Proxy
+
+[Panel]
+NET_info = script-name=NET_info,update-interval=1
