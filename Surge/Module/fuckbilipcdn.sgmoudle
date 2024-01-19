@@ -1,0 +1,5 @@
+#!name=哔哩哔哩优化
+#!desc=干掉哔哩哔哩垃圾CDN
+
+[Rule]
+OR,((AND,((RULE-SET,https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/Surge/BiliBili/BiliBili.list?raw=true,extended-matching), (NOT,((OR,((DEST-PORT,80), (DEST-PORT,443))))))), (OR,((DOMAIN-KEYWORD,-pcdn-,extended-matching), (DOMAIN-KEYWORD,httpdns,extended-matching), (DOMAIN-KEYWORD,mcdn.bilivideo.cn,extended-matching), (DOMAIN-SUFFIX,v1d.szbdyd.com,extended-matching), (DOMAIN-SUFFIX,ourdvsss.com,extended-matching))), (DEST-PORT,3478)),REJECT-DROP // 干掉b站垃圾cdn
