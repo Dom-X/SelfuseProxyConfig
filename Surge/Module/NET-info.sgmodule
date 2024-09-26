@@ -1,0 +1,15 @@
+#!name=Panels
+#!desc=信息面板
+
+[Panel]
+#网络详情
+NET_info = script-name=NET_info,update-interval=1
+
+
+[Script]
+#網路詳情 标题显示为根节点名
+#应当修改的字段 group 代理策略组名称
+NET_info = type=generic,timeout=10,script-path=https://gist.githubusercontent.com/linusxiong/32f8f1f30fbad2c1f3932a4f94725240/raw/0957a8044f6dcb438fc349e32e8cdd618f754c7c/NET_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Proxy
+
+#源代码@fishingworld/something
+#https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/net_info.js,argument=icon=externaldrive.connected.to.line.below&color=#9a7ff7&group=Proxy
