@@ -1,0 +1,150 @@
+name: Update Rules
+
+on:
+  schedule:
+    # 每天北京时间上午9点 (UTC+8) => UTC时间是凌晨1点
+    - cron: '0 1 * * *'
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: release  # 检出 release 分支
+        
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: Install dependencies
+      run: pip install requests
+        
+    - name: Download and process rules
+      run: |
+        cat << 'EOF' > process.py
+        import requests
+
+        def process_file(url, remove_duplicates=False, do_sort=True):
+            response = requests.get(url)
+            if response.status_code == 200:
+                lines = response.text.splitlines()
+                # 过滤掉注释行和特定字符串
+                filtered_lines = [line for line in lines 
+                                 if not line.startswith("#") 
+                                 and "this_ruleset_is_made_by_sukkaw.ruleset.skk.moe" not in line
+                                 and line.strip()]  # 确保行不是空的
+                if remove_duplicates:
+                    return sorted(set(filtered_lines))
+                elif do_sort:
+                    return sorted(filtered_lines)
+                else:
+                    return filtered_lines  # 不排序，保持原始顺序
+            else:
+                raise Exception(f"Failed to download {url}")
+
+        try:
+            # URLs
+            cn_url = "https://ruleset.skk.moe/List/non_ip/apple_cn.conf"
+            cdn_url = "https://ruleset.skk.moe/List/non_ip/apple_cdn.conf"
+            services_url = "https://ruleset.skk.moe/List/non_ip/apple_services.conf"
+            ai_url = "https://ruleset.skk.moe/List/non_ip/ai.conf"
+            telegram_domain_url = "https://ruleset.skk.moe/List/non_ip/telegram.conf"
+            telegram_ip_url = "https://ruleset.skk.moe/List/ip/telegram.conf"
+
+            # 处理 apple_cn 和 apple_cdn，去重并排序
+            cn_rules = process_file(cn_url, remove_duplicates=True)
+            cdn_rules = process_file(cdn_url, remove_duplicates=True)
+            combined_rules = sorted(set(cn_rules + cdn_rules))  # 合并并去重
+
+            with open("apple_cn.conf", "w") as f:
+                f.write("\n".join(combined_rules))
+
+            # 处理 apple_services，不去重，只排序
+            services_rules = process_file(services_url, remove_duplicates=False)
+            services_rules.sort()
+
+            with open("apple_services.conf", "w") as f:
+                f.write("\n".join(services_rules))
+            
+            # 处理 ai 规则，不去重也不排序
+            ai_rules = process_file(ai_url, remove_duplicates=False, do_sort=False)
+
+            with open("ai.conf", "w") as f:
+                f.write("\n".join(ai_rules))
+
+            # 处理 telegram 规则，合并 domain 和 ip 规则，不排序
+            telegram_domain_rules = process_file(telegram_domain_url, remove_duplicates=False, do_sort=False)
+            telegram_ip_rules = process_file(telegram_ip_url, remove_duplicates=False, do_sort=False)
+            
+            # 合并规则但不排序
+            telegram_combined_rules = telegram_domain_rules + telegram_ip_rules
+
+            with open("telegram.conf", "w") as f:
+                f.write("\n".join(telegram_combined_rules))
+                
+            print("Rules processing completed successfully!")
+            
+        except Exception as e:
+            print(f"Error occurred: {str(e)}")
+            exit(1)
+        EOF
+        
+        python process.py
+
+    - name: Generate YAML files
+      run: |
+        cat << 'EOF' > generate_yaml.py
+        def generate_yaml(conf_file, yaml_file):
+            with open(conf_file, 'r') as f:
+                lines = f.readlines()
+            with open(yaml_file, 'w') as f:
+                f.write("payload:\n")
+                for line in lines:
+                    line = line.strip()
+                    if line:
+                        f.write(f"  - {line}\n")
+            try:
+            # 生成 apple_cn.yaml
+            generate_yaml("apple_cn.conf", "apple_cn.yaml")
+            
+            # 生成 apple_services.yaml
+            generate_yaml("apple_services.conf", "apple_services.yaml")
+            
+            # 生成 ai.yaml
+            generate_yaml("ai.conf", "ai.yaml")
+            
+            # 生成 telegram.yaml
+            generate_yaml("telegram.conf", "telegram.yaml")
+            
+            print("YAML files generated successfully!")
+        except Exception as e:
+            print(f"Error generating YAML files: {str(e)}")
+            exit(1)
+        EOF
+        
+        python generate_yaml.py
+
+    - name: Config Git
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+    - name: Commit and Push
+      run: |
+        # 获取北京时间
+        current_time=$(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')
+        
+        git add apple_cn.conf apple_services.conf apple_cn.yaml apple_services.yaml ai.conf ai.yaml telegram.conf telegram.yaml
+
+        # 检查是否有更改
+        if git diff --cached --quiet; then
+          echo "No changes to commit."
+        else
+          git commit -m "Update rules: ${current_time}"
+          git push origin release
+        fi
