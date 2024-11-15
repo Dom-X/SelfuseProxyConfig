@@ -108,7 +108,7 @@ jobs:
                     line = line.strip()
                     if line:
                         f.write(f"  - {line}\n")
-            try:
+      try:
             # 生成 apple_cn.yaml
             generate_yaml("apple_cn.conf", "apple_cn.yaml")
             
