@@ -10,6 +10,7 @@ payload:
   - DOMAIN-SUFFIX,ai.com
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,chat.com
+  - DOMAIN-SUFFIX,groq.com
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,deepmind.com
   - DOMAIN-SUFFIX,anthropic.com
@@ -18,6 +19,7 @@ payload:
   - DOMAIN-SUFFIX,deepmind.google
   - DOMAIN-SUFFIX,notebooklm.google
   - DOMAIN-SUFFIX,generativeai.google
+  - DOMAIN,api.github.com
   - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN-SUFFIX,gemini.google.com
   - DOMAIN-SUFFIX,aistudio.google.com
