@@ -1,18 +1,18 @@
 payload:
-  - DOMAIN-SUFFIX,t.me
-  - DOMAIN-SUFFIX,tx.me
-  - DOMAIN-SUFFIX,telegram.me
-  - DOMAIN-SUFFIX,telesco.pe
-  - DOMAIN-SUFFIX,legra.ph
-  - DOMAIN-SUFFIX,telegra.ph
-  - DOMAIN-SUFFIX,tdesktop.com
-  - DOMAIN-SUFFIX,tg.dev
-  - DOMAIN-SUFFIX,telegram.dog
-  - DOMAIN-SUFFIX,telega.one
-  - DOMAIN-SUFFIX,graph.org
-  - DOMAIN-SUFFIX,telegram.org
-  - DOMAIN-SUFFIX,cdn-telegram.org
   - DOMAIN-SUFFIX,telegram.space
+  - DOMAIN-SUFFIX,cdn-telegram.org
+  - DOMAIN-SUFFIX,telegram.org
+  - DOMAIN-SUFFIX,graph.org
+  - DOMAIN-SUFFIX,telega.one
+  - DOMAIN-SUFFIX,telegram.dog
+  - DOMAIN-SUFFIX,tg.dev
+  - DOMAIN-SUFFIX,tdesktop.com
+  - DOMAIN-SUFFIX,telegra.ph
+  - DOMAIN-SUFFIX,legra.ph
+  - DOMAIN-SUFFIX,telesco.pe
+  - DOMAIN-SUFFIX,telegram.me
+  - DOMAIN-SUFFIX,tx.me
+  - DOMAIN-SUFFIX,t.me
   - IP-CIDR,91.105.192.0/23,no-resolve
   - IP-CIDR,91.108.4.0/22,no-resolve
   - IP-CIDR,91.108.8.0/21,no-resolve
