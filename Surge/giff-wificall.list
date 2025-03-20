@@ -1,4 +1,6 @@
 ##https://raw.githubusercontent.com/iniwex5/tools/refs/heads/main/rules/UK-wifi-call.list
+# 地区检测
+DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com
 # 沃达丰
 DOMAIN-SUFFIX, epdg.epc.mnc015.mcc234.pub.3gppnetwork.org
 DOMAIN-SUFFIX, ss.epdg.epc.mnc015.mcc234.pub.3gppnetwork.org
