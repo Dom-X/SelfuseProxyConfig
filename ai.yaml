@@ -22,6 +22,7 @@ payload:
   - DOMAIN,api.github.com
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,groq.com
+  - DOMAIN-SUFFIX,grok.com
   - DOMAIN-SUFFIX,chat.com
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,ai.com
