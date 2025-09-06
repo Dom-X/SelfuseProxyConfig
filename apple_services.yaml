@@ -25,4 +25,3 @@ payload:
   - PROCESS-NAME,fmfd
   - PROCESS-NAME,mapspushd
   - PROCESS-NAME,netbiosd
-  - PROCESS-NAME,trustd
