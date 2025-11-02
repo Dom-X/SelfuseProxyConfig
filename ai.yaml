@@ -8,8 +8,10 @@ payload:
   - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
   - DOMAIN-SUFFIX,generativelanguage.googleapis.com
   - DOMAIN,robinfrontend-pa.googleapis.com
+  - DOMAIN-SUFFIX,cloudcode-pa.googleapis.com
   - DOMAIN,aisandbox-pa.googleapis.com
   - DOMAIN-SUFFIX,geller-pa.googleapis.com
+  - DOMAIN,aida.googleapis.com
   - DOMAIN,gateway.ai.cloudflare.com
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,anthropic.com
