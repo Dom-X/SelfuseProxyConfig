@@ -5,6 +5,7 @@ payload:
   - DOMAIN-SUFFIX,deepmind.google
   - DOMAIN-SUFFIX,gemini.google
   - DOMAIN,ai.google.dev
+  - DOMAIN,apple-relay.fastly-edge.com
   - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
   - DOMAIN-SUFFIX,generativelanguage.googleapis.com
   - DOMAIN,robinfrontend-pa.googleapis.com
@@ -12,6 +13,9 @@ payload:
   - DOMAIN,aisandbox-pa.googleapis.com
   - DOMAIN-SUFFIX,geller-pa.googleapis.com
   - DOMAIN,aida.googleapis.com
+  - DOMAIN,apple-relay.cloudflare.com
+  - DOMAIN,cp4.cloudflare.com
+  - DOMAIN,cp2.cloudflare.com
   - DOMAIN,gateway.ai.cloudflare.com
   - DOMAIN-SUFFIX,oaistatic.com
   - DOMAIN-SUFFIX,anthropic.com
@@ -25,6 +29,9 @@ payload:
   - DOMAIN,jules.google.com
   - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN,api.github.com
+  - DOMAIN,apple-relay.apple.com
+  - DOMAIN,guzzoni.apple.com
+  - DOMAIN-SUFFIX,smoot.apple.com
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,groq.com
   - DOMAIN-SUFFIX,grok.com
