@@ -26,6 +26,7 @@ payload:
   - DOMAIN,jules.google.com
   - DOMAIN-SUFFIX,bard.google.com
   - DOMAIN,api.github.com
+  - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,groq.com
   - DOMAIN-SUFFIX,grok.com
