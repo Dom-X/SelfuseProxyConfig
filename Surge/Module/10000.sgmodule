@@ -1,6 +1,6 @@
 #!name=获取电信 cookie
 #!desc=获取电信 cookie
-#thx to:github.com/anker1209/Scriptable
+#thanks to:github.com/anker1209/Scriptable
 
 [Script]
 电信天翼套餐 = type=http-request,pattern=https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+,script-path=https://raw.githubusercontent.com/Sunert/Script/master/Task/telecomSky.js
