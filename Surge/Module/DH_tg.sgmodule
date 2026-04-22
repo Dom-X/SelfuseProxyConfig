@@ -1,0 +1,6 @@
+#!name= DH Optimize TG NetWork
+#!desc= 优化 tg 转圈
+#!category= 👸 ▸ DH_NetWork
+
+[Rule]
+IP-CIDR,5.28.195.0/24,REJECT-NO-DROP,no-resolve,pre-matching
