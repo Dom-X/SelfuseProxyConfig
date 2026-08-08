@@ -16,6 +16,7 @@ payload:
   - DOMAIN-SUFFIX,openart.ai
   - DOMAIN-SUFFIX,chatgpt.com
   - DOMAIN-SUFFIX,clipdrop.co
+  - DOMAIN-SUFFIX,chatgpt.site
   - DOMAIN-SUFFIX,deepmind.com
   - DOMAIN,ai.google.dev
   - DOMAIN-SUFFIX,anthropic.com
