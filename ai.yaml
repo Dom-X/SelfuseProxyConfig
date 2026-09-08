@@ -11,6 +11,7 @@ payload:
   - DOMAIN-SUFFIX,groq.com
   - DOMAIN-SUFFIX,sora.com
   - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,cursor.sh
   - DOMAIN-SUFFIX,jasper.ai
   - DOMAIN-SUFFIX,claude.com
   - DOMAIN-SUFFIX,openart.ai
